@@ -1,0 +1,37 @@
+.aheadDays-section{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0,0,0.4);
+    padding: 6px 10px;
+    /* padding-top: 5px; */
+    border-radius: 20px;
+}
+.aheadDays-detail{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    /* overflow-y: scroll; */
+}
+.aheadDay_Card{
+    width: 100%;
+    height: auto;
+    padding: 5px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#aheadForecastIcon{
+    text-align: center;
+}
+.weather{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:530px) {
+    .weather{
+        flex-direction: column;
+    }
+}

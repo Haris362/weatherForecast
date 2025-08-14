@@ -1,0 +1,128 @@
+.weather-forecast{
+    padding: 60px 30px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+.current-weather{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+.now{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 255, 255, 0.801);
+    position: relative;
+}
+.temprature-weather-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size:25px ;
+}
+
+.nowDetail{
+    display: flex;
+    margin-top: 30px;
+    background:rgba(0, 0, 0,0.3);
+    border-radius: 20px;
+    width: 100%;
+}
+.nowDetail div{
+    width: 90px;
+    height: auto;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 18px;
+}
+.nowDetail div p{
+    font-size: 2.2vh;
+}
+.nowDetail div img{
+    width: 45px;
+    height: 45px;
+}
+.location-btn {
+    display: flex;
+    align-items: center;
+    padding: 4px 16px;
+    border: none;
+    border-radius: 20px;
+    font-size: 17px;
+    color: #d0f7ff;
+    background: rgba(0, 191, 255, 0.15);
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.location-btn:hover {
+    background: rgba(0, 191, 255, 0.35);
+}
+
+#location-icon {
+    font-size: 22px;
+    margin-right: 6px;
+    color: #00bfff;
+}
+#date{
+    font-size: 18px;
+}
+#weather-image{
+    transform: translateY(16px);
+}
+#windAngleImg {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.5s ease;
+    margin-bottom: 5px;
+}
+@media (max-width:768px) {
+    .nowDetail span{
+        font-size: 16px;
+    }
+}
+@media (max-width:530px) {
+    .nowDetail{
+        width: 340px;
+        height: 110px;
+    }
+    .nowDetail div img{
+        width: 30px;
+        height: 30px;
+    }
+    #windAngleImg{
+        width: 20px;
+        height: 20px;
+    }
+    #windAngleDetail p{
+        margin-top: 5px;
+    }
+}
+@media (max-width:375px) {
+    .nowDetail{
+        width: 270px;
+        height: 90px;
+    }
+    .nowDetail p{
+        display: none;
+    }
+    .nowDetail span{
+        font-size: 15px;
+    }
+}

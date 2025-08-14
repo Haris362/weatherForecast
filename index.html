@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/index.css">
+    <link rel="stylesheet" href="./assets/current.css">
+    <link rel="stylesheet" href="./assets/hourlyForecast.css">
+    <link rel="stylesheet" href="./assets/aheadDays.css">
+    <title>Weather forecast.</title>
+</head>
+
+<body>
+    <!-- Search box -->
+    <nav class="nav2" id="nav2">
+        <h1 class="logo">Weather</h1>
+        <div class="search">
+            <div class="search-box">
+                <input type="text" class="city" id="city" placeholder="Search City(Ctrl + Shift + k)" autocomplete="off">
+                <i class='bxr bx-search' id="submit"></i>
+            </div>
+        </div>
+        <div id="settings-div">
+            <i class='bxr bx-cog' id="settings-icon"></i> 
+            <div class="settings" id="settings"></div>
+        </div>
+    </nav>
+    <img src="./images/noCityFound.png" class="indexImg" id="indexImg">
+    <div class="weather-forecast" id="weather-forecast">
+        <!-- ====Current weather==== -->
+        <section class="current-weather">
+                <div class="now">
+                    <img id="weather-image" style="width: 150px; height: 150px;">
+                    <div class="temprature-weather-icon">
+                        <span class="temp" id="temp"></span>
+                        <button class="location-btn"><i class="bxr bx-location" id="location-icon"></i><span
+                                id="location">Location</span></button>
+                        <span id="date"></span>
+                </div>
+            </div>
+            <div class="nowDetail">
+                <div id="windDetail">
+                    <img src="./images/windSpeed.png" alt="No img found">
+                    <p id="wind">Wind</p>
+                    <span id="windSpeed"></span>
+                </div>
+                <div id="humidityDetail">
+                    <img src="./images/humidity.png" alt="No img found">
+                    <p id="humidity">Humidity</p>
+                    <span id="humidityQuantity"></span>
+                </div>
+                <div id="feelsLikeDetail">
+                    <img src="./images/temperature.png" alt="No img found">
+                    <p id="feelsLike">Feels Like</p>
+                    <span id="feelsLikeTemp"></span>
+                </div>
+                <div id="cloudsDetail">
+                    <img src="./images/cloud.png" alt="No img found">
+                    <p id="clouds">Clouds</p>
+                    <span id="cloudsQuantity"></span>
+                </div>
+                <div id="windAngleDetail">
+                    <img src="./images/right-arrow.png" alt="No img found" id="windAngleImg"
+                        style="transform: rotate(0deg);">
+                    <p id="windAngle">Wind angle</p>
+                    <span id="angle"></span>
+                </div>
+            </div>
+        </section>
+        <!-- ====Hourly-Forecast==== -->
+        <section class="hourly-forecast-section">
+            <h2 class="hourlyForecast_Heading" >Today</h2>
+            <div class="hourly-forecast" id="hourly-forecast"></div>
+        </section>
+
+        <!-- ====Ahead days Forecast==== -->
+         <section class="aheadDays-section" id="aheadDays-section">
+            <div class="aheadDays-detail" id="aheadDays-detail"></div>
+         </section>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src="hourly-forecast.js"></script>
+</html>
