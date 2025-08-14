@@ -5,11 +5,11 @@
 }
 body{
     font-family: 'roboto';
-    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: cadetblue;
+    color: whitesmoke;
 }
 
 nav{

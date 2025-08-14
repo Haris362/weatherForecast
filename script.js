@@ -81,6 +81,9 @@ async function getWeather() {
     const cities = document.getElementById("city").value.trim();
     const city = cities.toLowerCase();
     const userLocation_text = document.getElementById("location");
+    if (city === ""){
+        alert("Please search any city.")
+    }
 
     async function currentWeather() {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`);
@@ -98,7 +101,7 @@ async function getWeather() {
             clouds.innerHTML = data["clouds"]["all"] + '%';
             const windDeg = Math.ceil(data["wind"]["deg"]);
             windAngle.innerHTML = windDeg + '°';
-            const localTime = new Date((data.dt + data.timezone) * 1000);
+            const localTime = new Date((data.dt) * 1000);
             
             date.innerHTML = localTime.toDateString();
             userLocation_text.innerHTML = data.name;
@@ -141,8 +144,9 @@ async function getWeather() {
             forecastHours(lat, lon, sunRise, sunSet);
             aheadDay(lat,lon)
             weatherImage.style.display = 'none'
+            
         } catch (error) {
-            console.log(error, "Please check the internet connection");
+            alert("No city found please seacrh correct city name.")
         }
     }
     currentWeather();
